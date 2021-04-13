@@ -1,0 +1,39 @@
+<!--Container principal-->
+<mat-sidenav-container>
+  <!--Sidenav tipo over-->
+  <mat-sidenav #sidenav mode="over">
+    <mat-toolbar color="primary">
+      <button
+        mat-icon-button
+        style="position: absolute; right: 7px;"
+        aria-label="Close"
+        class="header-button"
+        (click)="sidenav.toggle()"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-toolbar>
+    <p>Menu ira ficar aqui</p>
+  </mat-sidenav>
+
+  <!--Content com todo o html da página-->
+  <mat-sidenav-content>
+    <!--Botão para abrir e fechar o menu-->
+
+    <p>
+      <mat-toolbar color="primary">
+        <button
+          mat-icon-button
+          aria-label="Menu"
+          class="header-button"
+          (click)="sidenav.toggle()"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span> Pet Store</span>
+      </mat-toolbar>
+    </p>
+    <!--router que renderizará as páginas-->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
