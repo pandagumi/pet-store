@@ -6,7 +6,6 @@ import {MatSidenav, MatSidenavContainer, MatSidenavContent} from '@angular/mater
 import {MatToolbar} from '@angular/material/toolbar';
 import { MockComponents } from 'ng-mocks';
 
-
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -20,7 +19,7 @@ describe('AppComponent', () => {
           MatSidenav,
           MatSidenavContent,
           MatSidenavContainer,
-          MatIcon
+          MatIcon,
         )
       ],
     }).compileComponents();

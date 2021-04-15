@@ -1,0 +1,18 @@
+h2 {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.category-item {
+  cursor: pointer;
+  img {
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid silver;
+  }
+  p {
+    text-align: center;
+    font-size: 16px;
+  }
+}
