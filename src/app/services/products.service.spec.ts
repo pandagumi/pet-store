@@ -22,6 +22,7 @@ describe('ProductsService', () => {
 
   it('should test get products', () => {
     service.getProductsHighlights().subscribe(products => {
+      expect(products[0].name).toEqual('Food')
       })
 
       const req = httpTestingController.expectOne('https://petshop-sp.ue.r.appspot.com/v1/products-highlights')

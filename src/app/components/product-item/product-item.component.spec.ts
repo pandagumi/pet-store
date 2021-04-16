@@ -4,7 +4,7 @@ import { ProductItemComponent } from './product-item.component';
 import { AnimalType, Product } from './../../interfaces/product';
 import { MatIcon } from '@angular/material/icon';
 import { RouterTestingModule } from '@angular/router/testing';
-import { MatCard } from '@angular/material/card';
+import { MatCard, MatCardContent, MatCardTitle } from '@angular/material/card';
 
 const product: Product = {
   name: "Product",
@@ -38,7 +38,9 @@ describe('ProductItemComponent', () => {
         ProductItemComponent,
         MockComponents(
           MatCard,
-          MatIcon
+          MatIcon,
+          MatCardTitle,
+          MatCardContent
         )
       ]
     })
