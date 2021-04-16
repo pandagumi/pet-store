@@ -8,7 +8,7 @@ import { Category } from '../interfaces/category';
   providedIn: 'root'
 })
 export class CategoriesService {
-    
+      
 
   constructor(private http: HttpClient) { }
 

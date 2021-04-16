@@ -5,14 +5,10 @@ export interface ProductsHighlights {
     value: number,
     promotional_value: number,
     featured_image: string,
-    images: [
-        string
-    ],
-    videos: [
-        string
-    ],
-    raging_stars: number,
-    raging_count: number,
+    images: Array<String>,
+    videos: Array<String>,
+    rating_stars: number,
+    rating_count: number,
     installment_available: boolean,
     installment_count: number,
     featured: boolean,
@@ -22,4 +18,15 @@ export interface ProductsHighlights {
     status: string,
     url: string,
     created_at: string
+}
+
+export interface ProductsHighlightsGetResponse{
+    ProductsHighlights: Array<ProductsHighlights>,
+    cursor: string;
+}
+
+export enum AnimalType {
+    Cat = 'gato',
+    Dog = 'cachorro',
+    Others = 'outros'
 }

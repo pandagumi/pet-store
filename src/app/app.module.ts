@@ -10,12 +10,16 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoriesFeaturedComponent } from './components/categories-featured/categories-featured.component';
+import { ProductItemComponent } from './components/product-item/product-item.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    CategoriesFeaturedComponent
+    CategoriesFeaturedComponent,
+    ProductItemComponent
+
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,8 @@ import { CategoriesFeaturedComponent } from './components/categories-featured/ca
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
