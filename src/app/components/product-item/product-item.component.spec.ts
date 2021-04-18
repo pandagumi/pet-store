@@ -57,4 +57,48 @@ describe('ProductItemComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should check product name in html', () => {
+    const html = fixture.nativeElement;
+    const productName = document.querySelector('mat-card-title');
+    expect(productName?.textContent).toEqual(`${product.name}`);
+  });
+
+  it('should check product_value in html', () => {
+    const html = fixture.nativeElement;
+    const productValue = document.querySelector('div .container-value');
+    expect(productValue?.textContent).toContain(`${product.value}`);
+  });
+
+  it('should check promotional_value in html', () => {
+    const html = fixture.nativeElement;
+    const promotionalValue = document.querySelector('div .classeA');
+    expect(promotionalValue?.textContent).toContain(`${product.promotional_value}`);
+  });
+
+  it('should show five icon stars', () => {
+    const html = fixture.nativeElement;
+    // get all mat-icon
+    const matIcons = document.getElementsByTagName('mat-icon');
+    // check mat-icon count
+    expect(matIcons.length).toEqual(5);
+    // check first mat-icon
+    expect(matIcons[0].textContent?.trim()).toContain('star');
+  });
+
+  it('should show stars with 3.5 rating star', () => {
+    // Atualizando as estrelas do produto
+    component.product.rating_stars = 3.5
+    // Solicitando para que o HTML seja atualizado
+    fixture.autoDetectChanges();
+    // Obtendo todos os matIcons no html
+    const matIcons = document.getElementsByTagName('mat-icon');
+    // Checando todos os icones
+    expect(matIcons[0].textContent.trim()).toEqual('star');
+    expect(matIcons[1].textContent.trim()).toEqual('star');
+    expect(matIcons[2].textContent.trim()).toEqual('star');
+    expect(matIcons[3].textContent.trim()).toEqual('star_half');
+    expect(matIcons[4].textContent.trim()).toEqual('star_border');
+  });
+
 });
