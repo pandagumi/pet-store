@@ -1,0 +1,43 @@
+
+.breadcrumbs {
+    padding-top: 8px;
+    margin-left: 16px;
+    color: #777;
+}
+
+.swiper-container {
+    height: 270px;
+    max-width: 230px;
+    .swiper-slide {
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.subscribers {
+    color: #f24783;
+    font-size:x-larger;
+}
+.pricepromotional {
+    color: #f24783;
+    font-size:larger;
+}
+.pricevalue {
+    color: #7728ab;
+    font-size: larger;
+}
+
+.star-icon {
+    color: #ffbf3f;
+    height: 18px;
+    width: 18px;
+    font-size: 16px;
+  }
+
+  button {
+      width: 100%;
+      text-transform: uppercase;
+      font-weight: 200;
+      font-size: 13px;
+  }
