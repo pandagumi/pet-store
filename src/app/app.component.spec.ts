@@ -5,6 +5,9 @@ import {MatIcon} from '@angular/material/icon';
 import {MatSidenav, MatSidenavContainer, MatSidenavContent} from '@angular/material/sidenav';
 import {MatToolbar} from '@angular/material/toolbar';
 import { MockComponents } from 'ng-mocks';
+import { HttpClient } from '@angular/common/http';
+import { FooterComponent } from './components/footer/footer.component';
+import { RouterLink } from '@angular/router';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -20,6 +23,8 @@ describe('AppComponent', () => {
           MatSidenavContent,
           MatSidenavContainer,
           MatIcon,
+          FooterComponent,
+          RouterLink
         )
       ],
     }).compileComponents();

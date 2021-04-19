@@ -32,4 +32,16 @@ describe('ProductComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('Should show the title and price of a product',() =>{
+
+    const html = fixture.nativeElement;
+    const valor=html.querySelector('value');
+    const desconto=html.querySelector('promotional-value');
+    const titulo=html.querySelector('nome');
+    expect(titulo?.textContent?.trim()).toEqual(undefined);
+    expect(valor==204.90);
+    expect(desconto==184.41);
+
+  });
 });

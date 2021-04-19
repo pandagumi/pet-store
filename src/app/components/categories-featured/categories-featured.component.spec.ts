@@ -4,6 +4,8 @@ import { CategoriesFeaturedComponent } from './categories-featured.component';
 import { CategoriesService } from '../../services/categories.service'
 import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing'
+import { RouterLink } from '@angular/router';
+import { MockComponent } from 'ng-mocks';
 
 describe('CategoriesFeaturedComponent', () => {
   let component: CategoriesFeaturedComponent;
@@ -14,7 +16,7 @@ describe('CategoriesFeaturedComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       //imports: [HttpClientTestingModule],
-      declarations: [ CategoriesFeaturedComponent ],
+      declarations: [ CategoriesFeaturedComponent, MockComponent(RouterLink) ],
       providers: [
         {
           provide: CategoriesService,
