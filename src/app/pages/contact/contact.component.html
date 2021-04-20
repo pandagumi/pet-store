@@ -1,0 +1,54 @@
+<div class="container grid">
+  <div class="col-12">
+    <form class="contact-form" [formGroup]="formGroup">
+      <h1 class="title">Contato</h1>
+      <mat-form-field class="name" appearance="fill">
+        <mat-label>Nome</mat-label>
+        <mat-error *ngIf="formGroup.get('name').hasError('required')">
+          O nome é <strong>obrigatório</strong>
+        </mat-error>
+        <mat-error *ngIf="formGroup.get('name').hasError('minlength')">
+          O nome aceita no mínimo <strong>3</strong> caracteres
+        </mat-error>
+        <mat-error *ngIf="formGroup.get('name').hasError('maxlength')">
+          O nome aceita no máximo <strong>40</strong> caracteres
+        </mat-error>
+        <input matInput formControlName="name" />
+      </mat-form-field>
+      <mat-form-field class="email" appearance="fill">
+        <mat-label>E-mail</mat-label>
+        <mat-error *ngIf="formGroup.get('email').hasError('required')"
+          >O email é <strong>obrigatório</strong></mat-error
+        >
+        <mat-error
+          *ngIf="
+            formGroup.get('email').hasError('email') ||
+            formGroup.get('email').hasError('pattern')
+          "
+          >Email inválido</mat-error
+        >
+        <input matInput formControlName="email" />
+      </mat-form-field>
+      <mat-form-field class="phone" appearance="fill">
+        <mat-label>Telefone</mat-label>
+        <mat-error *ngIf="formGroup.get('phone').hasError('required')"
+          >O telefone é <strong>obrigatório</strong></mat-error
+        >
+        <mat-error *ngIf="formGroup.get('phone').hasError('pattern')"
+          >Telefone inválido</mat-error
+        >
+        <input matInput formControlName="phone" />
+      </mat-form-field>
+      <mat-form-field class="message" appearance="fill">
+        <mat-label>Mensagem</mat-label>
+        <mat-error *ngIf="formGroup.get('message').hasError('required')"
+          >Mensagem <strong>obrigatória</strong></mat-error
+        >
+        <textarea matInput formControlName="message"></textarea>
+      </mat-form-field>
+      <br />
+
+      <button mat-stroked-button (click)="sendForm()">Enviar</button>
+    </form>
+  </div>
+</div>

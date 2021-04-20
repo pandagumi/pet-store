@@ -15,13 +15,9 @@ export class ParametersServiceMock {
         city: "S\u00e3o Paulo",
         state: "SP",
         zip_code: "04795-100",
-        social_networks: [
-          { account: "imobzi", name: "Facebook" },
-       
-        ],
+        social_networks: [{ account: "imobzi", name: "Facebook" }],
         phones: [
           { type: "Principal", number: "(11) 4063-4100", country_code: "+55" },
-          
         ],
       });
       observer.complete();

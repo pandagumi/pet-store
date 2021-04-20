@@ -1,0 +1,18 @@
+.contact-form {
+  display: grid;
+  max-width: 80%;
+  margin: auto;
+  padding-top: 30px;
+}
+
+mat-form-field {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  border-radius: 4px 4px 0 0;
+  padding: 0.45em 0.45em 0 0.45em;
+}
+
+button {
+  border: none;
+}

@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductsService } from 'src/app/services/products.service';
-import { Product } from './../../interfaces/product'
+import { Component, OnInit } from "@angular/core";
+import { ProductsService } from "src/app/services/products.service";
+import { Product } from "./../../interfaces/product";
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: "app-dashboard",
+  templateUrl: "./dashboard.component.html",
+  styleUrls: ["./dashboard.component.scss"],
 })
 export class DashboardComponent implements OnInit {
-
-  constructor(private productService: ProductsService) { }
+  constructor(private productService: ProductsService) {}
 
   products: Product[] = [];
 
@@ -18,8 +17,8 @@ export class DashboardComponent implements OnInit {
   }
 
   getProductsHighlights(): void {
-    this.productService.getProductsHighlights()
-    .subscribe(products => this.products = products)
+    this.productService
+      .getProductsHighlights()
+      .subscribe((products) => (this.products = products));
   }
-
 }
