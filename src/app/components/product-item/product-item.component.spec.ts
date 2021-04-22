@@ -53,19 +53,16 @@ describe("ProductItemComponent", () => {
   });
 
   it("should check product name in html", () => {
-    const html = fixture.nativeElement;
     const productName = document.querySelector("mat-card-title");
     expect(productName?.textContent).toEqual(`${product.name}`);
   });
 
   it("should check product_value in html", () => {
-    const html = fixture.nativeElement;
     const productValue = document.querySelector("div .container-value");
     expect(productValue?.textContent).toContain(`${product.value}`);
   });
 
   it("should check promotional_value in html", () => {
-    const html = fixture.nativeElement;
     const promotionalValue = document.querySelector("div .classeA");
     expect(promotionalValue?.textContent).toContain(
       `${product.promotional_value}`
@@ -73,7 +70,6 @@ describe("ProductItemComponent", () => {
   });
 
   it("should show five icon stars", () => {
-    const html = fixture.nativeElement;
     // get all mat-icon
     const matIcons = document.getElementsByTagName("mat-icon");
     // check mat-icon count

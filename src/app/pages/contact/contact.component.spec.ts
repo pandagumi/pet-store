@@ -68,7 +68,7 @@ describe("ContactComponent", () => {
     expect(matError[0].textContent.trim()).toEqual("O nome é obrigatório");
 
     // Definir nome inválido menor que 3 caracteres
-    component.formGroup.patchValue({ name: "K" });
+    component.formGroup.patchValue({ name: "M" });
     fixture.autoDetectChanges();
 
     inputName = document.getElementsByClassName("name");
@@ -109,7 +109,7 @@ describe("ContactComponent", () => {
     expect(matError[0].textContent.trim()).toEqual("O telefone é obrigatório");
 
     // Definir telefone inválido
-    component.formGroup.patchValue({ phone: "324" });
+    component.formGroup.patchValue({ phone: "911" });
     fixture.autoDetectChanges();
 
     inputPhone = document.getElementsByClassName("phone");
@@ -117,7 +117,7 @@ describe("ContactComponent", () => {
     expect(matError[0].textContent.trim()).toEqual("Telefone inválido");
 
     // Definir telefone válido e verificar se não tem a tag mat-error
-    component.formGroup.patchValue({ phone: "11999999999" });
+    component.formGroup.patchValue({ phone: "11987654321" });
     fixture.autoDetectChanges();
 
     inputPhone = document.getElementsByClassName("phone");
@@ -136,7 +136,7 @@ describe("ContactComponent", () => {
     expect(matError[0].textContent.trim()).toEqual("Mensagem obrigatória");
 
     // Definir mensagem válida e verificar se não tem a tag mat-error
-    component.formGroup.patchValue({ message: "asdf" });
+    component.formGroup.patchValue({ message: "teste" });
     fixture.autoDetectChanges();
 
     inputMessage = document.getElementsByClassName("message");

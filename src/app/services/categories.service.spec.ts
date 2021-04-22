@@ -1,5 +1,4 @@
 import { TestBed } from "@angular/core/testing";
-import { HttpClient } from "@angular/common/http";
 import { CategoriesService } from "./categories.service";
 import {
   HttpClientTestingModule,
@@ -7,9 +6,8 @@ import {
 } from "@angular/common/http/testing";
 import { Category } from "../interfaces/category";
 
-describe("CategoriesService", () => {
+fdescribe("CategoriesService", () => {
   let service: CategoriesService;
-  let httpClient: HttpClient;
   let httpTestingController: HttpTestingController;
 
   beforeEach(() => {
@@ -17,7 +15,6 @@ describe("CategoriesService", () => {
       imports: [HttpClientTestingModule],
     });
     service = TestBed.inject(CategoriesService);
-    httpClient = TestBed.inject(HttpClient);
     httpTestingController = TestBed.inject(HttpTestingController);
   });
 

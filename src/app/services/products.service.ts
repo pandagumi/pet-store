@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { environment } from "src/environments/environment";
-import { Product } from "../interfaces/product";
+import { Product, ProductsGetResponse } from "../interfaces/product";
 
 @Injectable({
   providedIn: "root",
@@ -43,4 +43,19 @@ export class ProductsService {
         );
     });
   }
+
+  getProducts(){
+    return new Observable<ProductsGetResponse>(observer =>{
+      this.http.get<ProductsGetResponse>(`${environment.apiUrl}/v1/products`).subscribe(
+        products => {
+          observer.next(products);
+          observer.complete();
+        },
+        error => {
+          observer.next(error);
+          observer.complete();
+        }
+      )
+    })
+}
 }
