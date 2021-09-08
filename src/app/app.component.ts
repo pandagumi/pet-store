@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { MatSidenav } from "@angular/material/sidenav";
 import { Router } from "@angular/router";
+import { PwaService } from "./services/pwa.service";
 
 @Component({
   selector: "app-root",
@@ -15,10 +16,17 @@ export class AppComponent {
     { name: "Contato", router: "/contact" },
   ];
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    public Pwa: PwaService
+  ) {}
 
   showPage(pageName: string, sidenav: MatSidenav) {
     this.router.navigate([pageName]);
     sidenav.close();
+  }
+
+  installPwa(): void {
+    this.Pwa.promptEvent.prompt();
   }
 }

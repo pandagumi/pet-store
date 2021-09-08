@@ -6,6 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "analyze": "webpack-bundle-analyzer dist/pet-store/stats.json",
+    "start-pwa": "ng build --prod && http-server -p 8080 -c-1 dist/pet-store",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -21,12 +23,15 @@
     "@angular/platform-browser": "~11.2.8",
     "@angular/platform-browser-dynamic": "~11.2.8",
     "@angular/router": "~11.2.8",
+    "@angular/service-worker": "~11.2.8",
     "bootstrap": "^4.6.0",
+    "http-server": "^13.0.1",
     "ng-mocks": "^11.10.1",
     "ngx-useful-swiper": "^10.0.1",
     "rxjs": "~6.6.0",
     "swiper": "^6.5.7",
     "tslib": "^2.0.0",
+    "webpack-bundle-analyzer": "^4.4.2",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {

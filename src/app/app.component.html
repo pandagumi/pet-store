@@ -40,8 +40,12 @@
           <mat-icon>menu</mat-icon>
         </button>
         <span [routerLink]="['/']">Pet Store</span>
+        <button (click)="installPwa()">
+          Install
+        </button>
       </mat-toolbar>
     </p>
+    
     <!--router que renderizará as páginas-->
     <router-outlet></router-outlet>
 
